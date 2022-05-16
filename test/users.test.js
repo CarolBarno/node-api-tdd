@@ -1,8 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-underscore-dangle */
-// eslint-disable-next-line linebreak-style
-/* eslint-disable no-undef */
-/* eslint-disable linebreak-style */
+/* eslint-disable */
 const request = require('supertest');
 const { expect } = require('chai');
 const { User } = require('../models/user.model');

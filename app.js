@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const express = require('express');
 const mongoose = require('mongoose');
 const createError = require('http-errors');
@@ -18,8 +20,10 @@ mongoose.connect('mongodb://localhost/tddDB', {
     });
 
 const userRouter = require('./routes/user.route');
+const productRouter = require('./routes/product.route');
 
 app.use('api/users', userRouter);
+app.use('api/products', productRouter);
 
 app.use((req, res, next) => {
     next(createError(404));

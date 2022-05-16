@@ -1,4 +1,4 @@
-/* eslint-disable linebreak-style */
+/* eslint-disable */
 const mongoose = require('mongoose');
 const { User } = require('../models/user.model');
 
