@@ -2,7 +2,7 @@
   "name": "node-api-tdd",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "mocha --exit -- timeout 15000",
     "coverage": "nyc --reporter=html --reporter=text mocha --exit --timeout 15000"

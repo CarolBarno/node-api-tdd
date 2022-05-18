@@ -4,7 +4,6 @@ const { expect } = require('chai');
 const { User } = require('../models/user.model');
 const app = require('../app');
 
-// eslint-disable-next-line no-undef
 describe('api/users', () => {
   beforeEach(async () => {
     await User.deleteMany({});
@@ -97,7 +96,6 @@ describe('api/users', () => {
       let res = await request(app).delete(`/api/users/${user._id}`);
       expect(res.status).to.be.equal(200);
 
-      // eslint-disable-next-line no-underscore-dangle
       res = await request(app).get(`/api/users/${user._id}`);
       expect(res.status).to.be.equal(404);
     });

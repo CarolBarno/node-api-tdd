@@ -43,4 +43,4 @@ product.deleteProduct = async (req, res) => {
     return res.send('Product deleted');
 };
 
-module.exports = { product };
+module.exports = product;
