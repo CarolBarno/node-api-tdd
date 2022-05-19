@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for node-api-tdd/models/user.model.js</title>
+    <title>Code coverage report for node-api-tdd/models/product.model.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">node-api-tdd/models</a> user.model.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">node-api-tdd/models</a> product.model.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -80,10 +80,16 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -106,27 +112,30 @@
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable */
 const mongoose = require('mongoose');
 &nbsp;
-const userSchema = new mongoose.Schema({
+const productSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
         minlength: 3,
         maxlength: 50
     },
-    email: {
-        type: String,
+    price: {
+        type: Number,
         required: true,
-        minlength: 5,
-        maxlength: 255,
-        unique: true
+        min: 0,
     },
-    gender: {
+    category: {
+        type: String
+    },
+    description: {
         type: String,
-        required: true
+    },
+    image: {
+        type: String,
     }
 });
 &nbsp;
-module.exports.User = mongoose.model('Agent', userSchema);</pre></td></tr></table></pre>
+module.exports.Product = mongoose.model('Product', productSchema);</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

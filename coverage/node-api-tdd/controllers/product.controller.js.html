@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for node-api-tdd/controllers/user.controller.js</title>
+    <title>Code coverage report for node-api-tdd/controllers/product.controller.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">node-api-tdd/controllers</a> user.controller.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">node-api-tdd/controllers</a> product.controller.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">29.62% </span>
+                <span class="strong">32.14% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/27</span>
+                <span class='fraction'>9/28</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">32% </span>
+                <span class="strong">34.61% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/25</span>
+                <span class='fraction'>9/26</span>
             </div>
         
             
@@ -101,30 +101,15 @@
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -134,6 +119,27 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -143,52 +149,52 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable */
 const mongoose = require('mongoose');
-const { User } = require('../models/user.model');
+const { Product } = require('../models/product.model');
 &nbsp;
-const getAllUsers = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-  const users = <span class="cstat-no" title="statement not covered" >await User.find({});</span>
-<span class="cstat-no" title="statement not covered" >  return res.send(users);</span>
+const product = {};
+&nbsp;
+product.getAllProducts = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
+    const products = <span class="cstat-no" title="statement not covered" >await Product.find({});</span>
+<span class="cstat-no" title="statement not covered" >    return res.send(products);</span>
 };
 &nbsp;
-const getUser = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-  const userId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
-<span class="cstat-no" title="statement not covered" >  if (!mongoose.Types.ObjectId.isValid(userId)) { <span class="cstat-no" title="statement not covered" >return res.status(400).send('Invalid object id'); </span>}</span>
-  const user = <span class="cstat-no" title="statement not covered" >await User.findById(userId);</span>
-<span class="cstat-no" title="statement not covered" >  if (!user) { <span class="cstat-no" title="statement not covered" >return res.status(404).send('User not found'); </span>}</span>
-<span class="cstat-no" title="statement not covered" >  return res.send(user);</span>
+product.getProduct = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
+    const productId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
+<span class="cstat-no" title="statement not covered" >    if (!mongoose.Types.ObjectId.isValid(productId)) { <span class="cstat-no" title="statement not covered" >return res.status(400).send('Invalid object id'); </span>}</span>
+    const product = <span class="cstat-no" title="statement not covered" >await Product.findById(productId);</span>
+<span class="cstat-no" title="statement not covered" >    if (!product) { <span class="cstat-no" title="statement not covered" >return res.status(404).send('Product not found'); </span>}</span>
+<span class="cstat-no" title="statement not covered" >    return res.send(product);</span>
 };
 &nbsp;
-const createUser = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-  const user = <span class="cstat-no" title="statement not covered" >new User({</span>
-    name: req.body.name,
-    email: req.body.email,
-    gender: req.body.gender,
-  });
+product.createProduct = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
+    const product = <span class="cstat-no" title="statement not covered" >new Product({</span>
+        name: req.body.name,
+        price: req.body.price,
+        description: req.body.description,
+        image: req.body.image,
+        category: req.body.category
+    });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  await user.save();</span>
-<span class="cstat-no" title="statement not covered" >  return res.send(user);</span>
+<span class="cstat-no" title="statement not covered" >    await product.save();</span>
+<span class="cstat-no" title="statement not covered" >    return res.send(product);</span>
 };
 &nbsp;
-const updateUser = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-  const userId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
-<span class="cstat-no" title="statement not covered" >  User.findOneAndUpdate(userId, req.body, { new: true })</span>
-    .then(<span class="fstat-no" title="function not covered" >(u</span>ser) =&gt; <span class="cstat-no" title="statement not covered" >res.send(user))</span>
-    .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; <span class="cstat-no" title="statement not covered" >res.status(500).send(err))</span>;
+product.updateProduct = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
+    const productId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
+<span class="cstat-no" title="statement not covered" >    Product.findOneAndUpdate(productId, req.body, { new: true })</span>
+        .then(<span class="fstat-no" title="function not covered" >(p</span>roduct) =&gt; <span class="cstat-no" title="statement not covered" >res.send(product))</span>
+        .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; <span class="cstat-no" title="statement not covered" >res.status(500).send(err))</span>;
 };
 &nbsp;
-const deleteUser = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-  const userId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
-<span class="cstat-no" title="statement not covered" >  await User.findByIdAndDelete(userId);</span>
-<span class="cstat-no" title="statement not covered" >  return res.send('User deleted');</span>
+product.deleteProduct = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
+    const productId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
+<span class="cstat-no" title="statement not covered" >    await Product.findByIdAndDelete(productId);</span>
+<span class="cstat-no" title="statement not covered" >    return res.send('Product deleted');</span>
 };
 &nbsp;
-module.exports = {
-  deleteUser, updateUser, createUser, getAllUsers, getUser,
-};
+module.exports = product;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
