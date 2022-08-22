@@ -29,7 +29,7 @@ describe('api/products', () => {
             const product = new Product({
                 name: 'test', price: 100, description: 'test', image: 'test', category: 'test',
             });
-            product.savae();
+            product.save();
 
             const res = await request(app).get(`/api/products/${product._id}`);
             expect(res.status).to.equal(200);
